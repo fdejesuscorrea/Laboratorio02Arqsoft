@@ -3,6 +3,54 @@ let protoLoader = require("@grpc/proto-loader");
 let readline = require("readline");
 const REMOTE_SERVER = '0.0.0.0:50050';
 
+
+let employees = [
+    {
+        employee_id: 1,
+        name: 'felipe de jesus correa londoño',
+       accrued_leave_days:15,
+        requested_leave_days: 0
+    },
+    {
+        employee_id: 2,
+         name: 'carlitos zapata',
+       accrued_leave_days: 15,
+        requested_leave_days: 0
+    },
+    {
+        employee_id: 3,
+         name: 'juan david',
+       accrued_leave_days: 15,
+        requested_leave_days: 0
+    },
+    {
+        employee_id: 4,
+         name:'carlos quiros',
+       accrued_leave_days: 15,
+        requested_leave_days: 0
+    },
+    {
+        employee_id: 5,
+         name:'david lopez',
+       accrued_leave_days: 15,
+        requested_leave_days: 0
+    },
+    {
+        employee_id: 6,
+         name:'ernesto guevara',
+       accrued_leave_days: 15,
+        requested_leave_days: 0
+    },
+    {
+        employee_id: 7,
+         name:'Toño Gramsci',
+       accrued_leave_days: 15,
+        requested_leave_days: 0
+    }
+    
+];
+
+
  //Read terminal Lines
  let reader = readline.createInterface({
     input: process.stdin,
@@ -20,36 +68,6 @@ const REMOTE_SERVER = '0.0.0.0:50050';
     });
 
     let proto= grpc.loadPackageDefinition(load);
-
-
-//Empleados
-let employees = [
-    {
-        employee_id: 1,
-        name: 'Daniel Monroy',
-       accrued_leave_days:15,
-        requested_leave_days: 0
-    },
-    {
-        employee_id: 2,
-         name: 'Vicky Mora',
-       accrued_leave_days: 15,
-        requested_leave_days: 0
-    },
-    {
-        employee_id: 3,
-         name: 'Mateo Baena',
-       accrued_leave_days: 15,
-        requested_leave_days: 0
-    },
-    {
-        employee_id: 4,
-         name:'Juan José Bisho',
-       accrued_leave_days: 15,
-        requested_leave_days: 0
-    }
-    
-];
 
 
 //Create gRPC client
